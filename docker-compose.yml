@@ -1,0 +1,13 @@
+version: "2"
+services:
+  test:
+    image: test
+    build: ./
+    ports:
+      - 8099:8099
+    container_name: test
+
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+     - PORT=8099
